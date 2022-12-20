@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>MyWebApp</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+   <servlet>
+   <servlet-name>FirstServlet</servlet-name>
+   <servlet-class>com.demo.servlet.MyFirstServlet</servlet-class>
+   <load-on-startup>1</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+   <servlet-name>FirstServlet</servlet-name>
+   <url-pattern>/hello</url-pattern>
+   </servlet-mapping>
+   <servlet>
+   <servlet-name>NumFunction</servlet-name>
+   <servlet-class>com.demo.servlet.MyNumOperation</servlet-class>
+   <load-on-startup>2</load-on-startup>
+   </servlet>
+   <servlet-mapping>
+   <servlet-name>NumFunction</servlet-name>
+   <url-pattern>/addition</url-pattern>
+   
+   
+   
+   
+   </servlet-mapping>
+   
+  </web-app>
