@@ -2,6 +2,33 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
   <display-name>ProductCrudOperation</display-name>
   <welcome-file-list>
-    <welcome-file>addproduct.html</welcome-file>
+    <welcome-file>Login.html</welcome-file>
   </welcome-file-list>
+  
+   <servlet>
+   <servlet-name>Authentication</servlet-name>
+   <servlet-class>com.demo.servlet.LoginServlet</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   <servlet-name>Authentication</servlet-name>
+   <url-pattern>/validate</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+  <servlet-name>UserServlet</servlet-name>
+  <servlet-class>com.demo.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserServlet</servlet-name>
+  <url-pattern>/users</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>UserServlet1</servlet-name>
+  <servlet-class>com.demo.servlet.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserServlet1</servlet-name>
+  <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
 </web-app>
